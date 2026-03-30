@@ -1,95 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GoalForge Heroes | Developer Page</title>
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #292947);
-    color: white;
-    text-align: center;
-}
-header {
-    padding: 60px 20px;
-}
-h1 {
-    font-size: 2.5em;
-    background: linear-gradient(90deg, #00ffe0, #6a5cff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.card {
-    background: rgba(255,255,255,0.05);
-    margin: 20px;
-    padding: 30px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-.card:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.08);
-}
-button {
-    background: linear-gradient(90deg, #00ffe0, #6a5cff);
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s;
-}
-button:hover {
-    opacity: 0.8;
-}
-nav a {
-    margin: 10px;
-    color: #00ffe0;
-    text-decoration: none;
-}
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    font-size: 0.9em;
-    opacity: 0.7;
-}
-@media(max-width:600px){
-    h1{font-size:1.8em;}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoalForge Heroes — Developer Overview</title>
+  <meta name="description" content="Official developer overview page for GoalForge Heroes by George Whitaker." />
+  <style>
+    :root{
+      --bg:#070b1a;
+      --bg2:#0f1630;
+      --card:rgba(255,255,255,.08);
+      --line:rgba(255,255,255,.12);
+      --text:#f4f7ff;
+      --muted:#b8c2e3;
+      --aqua:#77f2df;
+      --violet:#8e8bff;
+      --glow:0 10px 30px rgba(105,121,255,.18);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(119,242,223,.16), transparent 22%),
+        radial-gradient(circle at 85% 10%, rgba(142,139,255,.16), transparent 24%),
+        radial-gradient(circle at 70% 80%, rgba(119,242,223,.12), transparent 22%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+      background-size:42px 42px;
+      mask-image:radial-gradient(circle at center, black 45%, transparent 88%);
+      pointer-events:none;
+    }
+    .shell{width:min(1100px,calc(100% - 28px)); margin:18px auto 42px; position:relative}
+    .topbar,.panel,.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--glow); backdrop-filter:blur(18px)}
+    .topbar{padding:18px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; position:sticky; top:12px; z-index:20}
+    .logo{
+      width:58px; height:58px; border-radius:18px;
+      background:conic-gradient(from 220deg, #77f2df, #8e8bff, #ffcf70, #77f2df);
+      box-shadow:inset 0 0 18px rgba(255,255,255,.35), 0 12px 30px rgba(0,0,0,.28);
+      position:relative; flex:0 0 auto;
+    }
+    .logo:after{content:""; position:absolute; inset:12px; border-radius:12px; background:#11182f}
+    .brand{flex:1 1 220px; min-width:180px}
+    .brand h1{margin:0; font-size:clamp(1.3rem,2vw,1.8rem)}
+    .brand p{margin:4px 0 0; color:var(--muted); font-size:.95rem}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; margin-left:auto}
+    .nav a{
+      text-decoration:none; color:var(--text); padding:12px 18px; border-radius:18px;
+      border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05);
+      transition:.25s transform,.25s background,.25s border-color;
+      white-space:nowrap;
+    }
+    .nav a:hover,.nav a.active{transform:translateY(-1px); background:linear-gradient(135deg, rgba(119,242,223,.18), rgba(142,139,255,.18)); border-color:rgba(119,242,223,.35)}
+    .hero{margin-top:18px; padding:28px; position:relative; overflow:hidden}
+    .eyebrow{display:inline-flex; padding:10px 18px; border-radius:999px; border:1px solid rgba(119,242,223,.28); background:rgba(119,242,223,.08); color:var(--aqua); font-size:.95rem}
+    h2{font-size:clamp(2.2rem,6vw,4.4rem); line-height:.97; margin:18px 0 16px; letter-spacing:-.03em; max-width:720px}
+    .lead{max-width:760px; color:var(--muted); font-size:clamp(1.02rem,1.5vw,1.22rem); line-height:1.75}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px; border-radius:18px; text-decoration:none; color:var(--text); border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05)}
+    .btn.primary{background:linear-gradient(135deg, rgba(119,242,223,.24), rgba(142,139,255,.24)); border-color:rgba(119,242,223,.34)}
+    .spark,.spark2,.spark3{position:absolute; border-radius:50%; filter:blur(.4px); opacity:.8}
+    .spark{width:13px;height:13px;background:#77f2df; top:16px; left:28px; animation:float 5s ease-in-out infinite}
+    .spark2{width:15px;height:15px;background:#8e8bff; right:42px; top:120px; animation:float 7s ease-in-out infinite}
+    .spark3{width:14px;height:14px;background:#ffcf70; right:150px; bottom:110px; animation:float 6s ease-in-out infinite}
+    @keyframes float{50%{transform:translateY(-8px) translateX(5px)}}
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px; margin-top:18px}
+    .card{padding:22px}
+    .span-7{grid-column:span 7}.span-5{grid-column:span 5}.span-4{grid-column:span 4}.span-8{grid-column:span 8}
+    .card h3{margin:0 0 10px; font-size:1.25rem}
+    .meta{display:grid; gap:10px; color:var(--muted)}
+    .meta strong{color:var(--text)}
+    .feature{display:flex; gap:12px; align-items:flex-start}
+    .dot{width:11px; height:11px; margin-top:8px; border-radius:50%; background:linear-gradient(135deg,var(--aqua),var(--violet)); box-shadow:0 0 18px rgba(119,242,223,.35)}
+    footer{padding:18px 4px 4px; color:var(--muted); text-align:center; font-size:.95rem}
+    @media (max-width: 860px){
+      .span-7,.span-5,.span-4,.span-8{grid-column:1/-1}
+      .topbar{padding:14px}
+    }
+    @media (max-width: 640px){
+      .shell{width:min(100% - 14px, 900px); margin-top:10px}
+      .topbar{display:grid; grid-template-columns:58px 1fr; align-items:center; gap:12px; border-radius:24px}
+      .brand{min-width:0}
+      .brand p{font-size:.88rem}
+      .nav{grid-column:1/-1; margin-left:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; width:100%}
+      .nav a{text-align:center; padding:13px 10px; border-radius:16px}
+      .hero{padding:22px 16px; border-radius:26px}
+      .cta{display:grid; grid-template-columns:1fr; gap:10px}
+      .btn{width:100%}
+      .card{padding:18px}
+      h2{max-width:100%}
+    }
+  </style>
 </head>
 <body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="brand">
+        <h1>GoalForge Heroes</h1>
+        <p>Official developer overview for App Store Connect review and user transparency.</p>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="marketing.html">Marketing</a>
+      </nav>
+    </header>
 
-<header>
-<h1>GoalForge Heroes</h1>
-<p>Official Developer Page</p>
-</header>
+    <section class="panel hero">
+      <div class="spark"></div><div class="spark2"></div><div class="spark3"></div>
+      <span class="eyebrow">Official developer information page</span>
+      <h2>Transparent information for users and reviewers.</h2>
+      <p class="lead">This website presents clear and open information about the application <strong>GoalForge Heroes</strong>, its developer, and the current product approach. The goal is to make the developer account understandable, trustworthy, and easy to review in App Store Connect.</p>
+      <div class="cta">
+        <a class="btn primary" href="privacy-policy.html">Read Privacy Policy</a>
+        <a class="btn" href="support.html">Open Support Page</a>
+        <a class="btn" href="marketing.html">Open Marketing Page</a>
+      </div>
+    </section>
 
-<div class="card">
-<h2>About the App</h2>
-<p>GoalForge Heroes is designed to help users build discipline, achieve goals and level up personal growth through engaging mechanics.</p>
-</div>
+    <section class="grid">
+      <article class="card span-7">
+        <h3>Developer details</h3>
+        <div class="meta">
+          <div><strong>Developer name:</strong> George Whitaker</div>
+          <div><strong>Contact account:</strong> davewklr2@gmail.com</div>
+          <div><strong>Application:</strong> GoalForge Heroes</div>
+          <div><strong>Purpose of this website:</strong> to provide visible, simple, and honest information for App Store reviewers and users.</div>
+        </div>
+      </article>
 
-<div class="card">
-<h2>Developer</h2>
-<p><strong>George Whitaker</strong></p>
-<p>Contact: davewklr2@gmail.com</p>
-<p>I am an independent developer focused on delivering meaningful and transparent digital products.</p>
-</div>
+      <article class="card span-5">
+        <h3>Product position</h3>
+        <div class="feature"><span class="dot"></span><div>The app is presented as an actively maintained independent project.</div></div>
+        <div class="feature"><span class="dot"></span><div>The current version does not include paid features or subscriptions.</div></div>
+        <div class="feature"><span class="dot"></span><div>Future monetization may be introduced carefully to support development.</div></div>
+      </article>
 
-<nav>
-<a href="privacy-policy.html">Privacy Policy</a>
-<a href="support.html">Support</a>
-<a href="marketing.html">Marketing Info</a>
-</nav>
+      <article class="card span-4">
+        <h3>Privacy approach</h3>
+        <p class="lead" style="font-size:1rem;max-width:none;margin:0">The application does not collect, store, or share personal user data.</p>
+      </article>
 
-<footer>
-© 2025 George Whitaker. All rights reserved.
-</footer>
+      <article class="card span-8">
+        <h3>Why this page exists</h3>
+        <p class="lead" style="font-size:1rem;max-width:none;margin:0">The website is designed to show an open and responsible presentation of the developer account. It helps users understand who is behind the app and gives reviewers a clear overview of privacy, support, and product intent in one place.</p>
+      </article>
+    </section>
 
+    <footer>
+      GoalForge Heroes · Developer page for George Whitaker · Contact: davewklr2@gmail.com
+    </footer>
+  </div>
 </body>
 </html>
