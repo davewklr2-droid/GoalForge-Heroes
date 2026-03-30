@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support | GoalForge Heroes</title>
-<style>
-body{
-    margin:0;
-    font-family:'Segoe UI', sans-serif;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-.card{
-    background:rgba(255,255,255,0.08);
-    padding:30px;
-    border-radius:20px;
-    max-width:700px;
-    margin:auto;
-}
-a{
-    color:#00ffe0;
-    text-decoration:none;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — GoalForge Heroes</title>
+  <meta name="description" content="Support information for GoalForge Heroes by George Whitaker." />
+  <style>
+    :root{--bg:#070b1a;--bg2:#0f1630;--card:rgba(255,255,255,.08);--line:rgba(255,255,255,.12);--text:#f4f7ff;--muted:#b8c2e3;--aqua:#77f2df;--violet:#8e8bff;--radius:26px}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 18% 18%, rgba(119,242,223,.16), transparent 22%),radial-gradient(circle at 82% 14%, rgba(142,139,255,.16), transparent 24%),linear-gradient(180deg,var(--bg),var(--bg2));min-height:100vh}
+    .shell{width:min(1100px,calc(100% - 28px));margin:18px auto 42px}.topbar,.panel,.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(18px);box-shadow:0 10px 30px rgba(105,121,255,.18)}
+    .topbar{padding:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}.brand{font-weight:800;font-size:clamp(1.3rem,2vw,1.8rem);flex:1 1 210px}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--text);padding:12px 18px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}.nav a:hover,.nav a.active{background:linear-gradient(135deg, rgba(119,242,223,.18), rgba(142,139,255,.18));border-color:rgba(119,242,223,.35)}
+    .panel{margin-top:18px;padding:24px}.eyebrow{display:inline-flex;padding:10px 18px;border-radius:999px;border:1px solid rgba(119,242,223,.28);background:rgba(119,242,223,.08);color:var(--aqua)}h1{font-size:clamp(2rem,5.4vw,4rem);line-height:1;letter-spacing:-.03em;margin:18px 0 14px}.lead{max-width:800px;color:var(--muted);font-size:clamp(1rem,1.4vw,1.18rem);line-height:1.75}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}.card{padding:22px}.span-5{grid-column:span 5}.span-7{grid-column:span 7}.card h2{margin:0 0 10px}.muted{color:var(--muted);line-height:1.7}.contact{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 18px;border-radius:18px;text-decoration:none;color:var(--text);border:1px solid rgba(119,242,223,.28);background:linear-gradient(135deg, rgba(119,242,223,.16), rgba(142,139,255,.14));word-break:break-all}
+    .footer{padding:18px 4px 4px;color:var(--muted);text-align:center}
+    @media (max-width:860px){.span-5,.span-7{grid-column:1/-1}}
+    @media (max-width:640px){.shell{width:min(100% - 14px, 900px);margin-top:10px}.topbar{display:grid;grid-template-columns:1fr;gap:10px;padding:14px}.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.nav a{text-align:center;padding:13px 10px;border-radius:16px}.panel,.card{border-radius:24px;padding:18px}}
+  </style>
 </head>
 <body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">GoalForge Heroes</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a class="active" href="support.html">Support</a>
+        <a href="marketing.html">Marketing</a>
+      </nav>
+    </header>
 
-<h1>Support</h1>
+    <section class="panel">
+      <span class="eyebrow">Support URL</span>
+      <h1>Support for GoalForge Heroes</h1>
+      <p class="lead">This page provides direct support information for users and for App Store Connect review. If assistance is needed regarding the application, feedback, or clarification about the developer account, the contact below may be used.</p>
+    </section>
 
-<div class="card">
-<p>If you experience any issues or have suggestions, feel free to contact:</p>
-<h3>davewklr2@gmail.com</h3>
-<p>I aim to respond within 48 hours.</p>
-<p>Your feedback helps improve GoalForge Heroes.</p>
-</div>
+    <section class="grid">
+      <article class="card span-5">
+        <h2>Developer</h2>
+        <p class="muted"><strong style="color:#fff">George Whitaker</strong><br/>Independent app developer</p>
+      </article>
+      <article class="card span-7">
+        <h2>Support contact</h2>
+        <a class="contact" href="mailto:davewklr2@gmail.com">davewklr2@gmail.com</a>
+        <p class="muted">Users may contact the developer for general help, policy clarification, or application-related questions.</p>
+      </article>
+      <article class="card span-12">
+        <h2>Support scope</h2>
+        <p class="muted">Support is intended for questions about app functionality, general feedback, reviewer clarification, and public developer information presented on this website.</p>
+      </article>
+    </section>
 
-<p style="margin-top:20px;">
-<a href="index.html">Back to Home</a>
-</p>
-
+    <div class="footer">GoalForge Heroes · Support page · George Whitaker · davewklr2@gmail.com</div>
+  </div>
 </body>
 </html>
