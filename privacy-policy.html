@@ -1,86 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | GoalForge Heroes</title>
-<style>
-body {
-    margin:0;
-    font-family:'Segoe UI', sans-serif;
-    background:#111827;
-    color:white;
-    padding:20px;
-}
-.container {
-    max-width:800px;
-    margin:auto;
-}
-h1 {
-    text-align:center;
-    color:#00ffe0;
-}
-.card {
-    background:rgba(255,255,255,0.05);
-    padding:25px;
-    border-radius:15px;
-}
-button {
-    margin-top:20px;
-    padding:12px 20px;
-    border:none;
-    border-radius:30px;
-    background:#6a5cff;
-    color:white;
-    cursor:pointer;
-}
-button:hover {
-    opacity:0.8;
-}
-a{color:#00ffe0;}
-</style>
-
-<script>
-function closeWebView() {
-    if (window.Android && Android.closeWebView) {
-        Android.closeWebView();
-    } else if (window.webkit && window.webkit.messageHandlers.closeWebView) {
-        window.webkit.messageHandlers.closeWebView.postMessage(null);
-    } else {
-        alert("Close action is available only inside the app.");
-    }
-}
-</script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — GoalForge Heroes</title>
+  <meta name="description" content="Privacy Policy for GoalForge Heroes by George Whitaker." />
+  <style>
+    :root{--bg:#070b1a;--bg2:#0f1630;--card:rgba(255,255,255,.08);--line:rgba(255,255,255,.12);--text:#f4f7ff;--muted:#b8c2e3;--aqua:#77f2df;--violet:#8e8bff;--ok:#98ffb3;--radius:26px}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 20%, rgba(119,242,223,.16), transparent 22%),radial-gradient(circle at 85% 10%, rgba(142,139,255,.16), transparent 24%),linear-gradient(180deg,var(--bg),var(--bg2));min-height:100vh}
+    body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(circle at center, black 45%, transparent 88%);pointer-events:none}
+    .shell{width:min(1100px,calc(100% - 28px));margin:18px auto 42px}.topbar,.panel,.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(18px);box-shadow:0 10px 30px rgba(105,121,255,.18)}
+    .topbar{padding:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}.brand{font-weight:800;font-size:clamp(1.3rem,2vw,1.8rem);flex:1 1 210px}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--text);padding:12px 18px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}.nav a:hover,.nav a.active{background:linear-gradient(135deg, rgba(119,242,223,.18), rgba(142,139,255,.18));border-color:rgba(119,242,223,.35)}
+    .panel{margin-top:18px;padding:24px;position:relative;overflow:hidden}.eyebrow{display:inline-flex;padding:10px 18px;border-radius:999px;border:1px solid rgba(119,242,223,.28);background:rgba(119,242,223,.08);color:var(--aqua)}h1{font-size:clamp(2rem,5.6vw,4.2rem);line-height:.98;letter-spacing:-.03em;margin:18px 0 14px;max-width:760px}.lead{max-width:760px;color:var(--muted);font-size:clamp(1rem,1.4vw,1.18rem);line-height:1.75}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}.tile{padding:22px}.span-6{grid-column:span 6}.span-12{grid-column:1/-1}.tile h2{margin:0 0 10px;font-size:1.25rem}.tile p,.tile li{color:var(--muted);line-height:1.7}.ok{color:var(--ok);font-weight:700}.footer{padding:18px 4px 4px;color:var(--muted);text-align:center}
+    @media (max-width:860px){.span-6,.span-12{grid-column:1/-1}}
+    @media (max-width:640px){.shell{width:min(100% - 14px, 900px);margin-top:10px}.topbar{display:grid;grid-template-columns:1fr;gap:10px;padding:14px}.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.nav a{text-align:center;padding:13px 10px;border-radius:16px}.panel,.tile{border-radius:24px;padding:18px}}
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>Privacy Policy</h1>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">GoalForge Heroes</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="privacy-policy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="marketing.html">Marketing</a>
+      </nav>
+    </header>
 
-<div class="card">
-<p><strong>Developer:</strong> George Whitaker</p>
-<p><strong>App:</strong> GoalForge Heroes</p>
+    <section class="panel">
+      <span class="eyebrow">Privacy Policy</span>
+      <h1>We do not collect, store, or share personal data.</h1>
+      <p class="lead">This Privacy Policy applies to the application <strong>GoalForge Heroes</strong> provided by <strong>George Whitaker</strong>. The app is built with a simple privacy approach. We do not collect personal information, do not store user data, and do not share user data with third parties.</p>
+    </section>
 
-<h3>Data Collection</h3>
-<p>We do NOT collect any personal data.</p>
-<p>We do NOT store any user information.</p>
-<p>We do NOT share any data with third parties.</p>
+    <section class="grid">
+      <article class="tile span-6">
+        <h2 class="ok">No data collection</h2>
+        <p>We do not collect personal information from users.</p>
+      </article>
+      <article class="tile span-6">
+        <h2 class="ok">No data storage</h2>
+        <p>We do not retain personal data on servers, databases, or internal storage for analytics or profiling.</p>
+      </article>
+      <article class="tile span-6">
+        <h2 class="ok">No data sharing</h2>
+        <p>We do not sell, transfer, disclose, or share personal data with external services or third parties.</p>
+      </article>
+      <article class="tile span-6">
+        <h2>Questions</h2>
+        <p>If users or reviewers need clarification about this policy, they may use the support page of this website.</p>
+      </article>
+      <article class="tile span-12">
+        <h2>Policy summary</h2>
+        <ul>
+          <li>The application does not collect personal data.</li>
+          <li>The application does not store personal data.</li>
+          <li>The application does not share personal data.</li>
+          <li>This statement is provided to keep the privacy position clear and easy to review in App Store Connect.</li>
+        </ul>
+      </article>
+    </section>
 
-<h3>Permissions</h3>
-<p>The application does not request or process sensitive permissions.</p>
-
-<h3>Children’s Privacy</h3>
-<p>The app does not knowingly collect data from anyone, including children.</p>
-
-<p>This policy is effective as of 2025.</p>
-
-
-</div>
-
-<p style="text-align:center;margin-top:20px;">
-<a href="index.html">Back to Home</a>
-</p>
-
-</div>
+    <div class="footer">GoalForge Heroes · Privacy Policy · George Whitaker · davewklr2@gmail.com</div>
+  </div>
 </body>
 </html>
