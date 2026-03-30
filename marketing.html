@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketing | GoalForge Heroes</title>
-<style>
-body{
-    margin:0;
-    font-family:'Segoe UI', sans-serif;
-    background:#1a1a2e;
-    color:white;
-    padding:30px;
-    text-align:center;
-}
-.card{
-    background:rgba(255,255,255,0.06);
-    padding:30px;
-    border-radius:20px;
-    max-width:800px;
-    margin:auto;
-}
-.highlight{
-    color:#00ffe0;
-}
-a{
-    color:#6a5cff;
-    text-decoration:none;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing — GoalForge Heroes</title>
+  <meta name="description" content="Marketing page for GoalForge Heroes by George Whitaker." />
+  <style>
+    :root{--bg:#070b1a;--bg2:#0f1630;--card:rgba(255,255,255,.08);--line:rgba(255,255,255,.12);--text:#f4f7ff;--muted:#b8c2e3;--aqua:#77f2df;--violet:#8e8bff;--gold:#ffd16f;--radius:26px}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 18% 18%, rgba(119,242,223,.16), transparent 22%),radial-gradient(circle at 82% 14%, rgba(142,139,255,.16), transparent 24%),radial-gradient(circle at 70% 80%, rgba(255,209,111,.12), transparent 24%),linear-gradient(180deg,var(--bg),var(--bg2));min-height:100vh}
+    .shell{width:min(1100px,calc(100% - 28px));margin:18px auto 42px}.topbar,.panel,.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(18px);box-shadow:0 10px 30px rgba(105,121,255,.18)}
+    .topbar{padding:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}.brand{font-weight:800;font-size:clamp(1.3rem,2vw,1.8rem);flex:1 1 210px}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--text);padding:12px 18px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}.nav a:hover,.nav a.active{background:linear-gradient(135deg, rgba(119,242,223,.18), rgba(142,139,255,.18));border-color:rgba(119,242,223,.35)}
+    .panel{margin-top:18px;padding:24px;position:relative;overflow:hidden}.eyebrow{display:inline-flex;padding:10px 18px;border-radius:999px;border:1px solid rgba(255,209,111,.28);background:rgba(255,209,111,.08);color:var(--gold)}h1{font-size:clamp(2rem,5.7vw,4.2rem);line-height:1;letter-spacing:-.03em;margin:18px 0 14px;max-width:760px}.lead{max-width:800px;color:var(--muted);font-size:clamp(1rem,1.4vw,1.18rem);line-height:1.75}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}.card{padding:22px}.span-4{grid-column:span 4}.span-8{grid-column:span 8}.card h2{margin:0 0 10px}.muted{color:var(--muted);line-height:1.7}.tag{display:inline-flex;padding:8px 14px;border-radius:999px;background:rgba(119,242,223,.1);border:1px solid rgba(119,242,223,.2);color:var(--aqua);margin:4px 8px 0 0}
+    .footer{padding:18px 4px 4px;color:var(--muted);text-align:center}
+    @media (max-width:860px){.span-4,.span-8{grid-column:1/-1}}
+    @media (max-width:640px){.shell{width:min(100% - 14px, 900px);margin-top:10px}.topbar{display:grid;grid-template-columns:1fr;gap:10px;padding:14px}.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.nav a{text-align:center;padding:13px 10px;border-radius:16px}.panel,.card{border-radius:24px;padding:18px}}
+  </style>
 </head>
 <body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">GoalForge Heroes</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a class="active" href="marketing.html">Marketing</a>
+      </nav>
+    </header>
 
-<h1>About GoalForge Heroes</h1>
+    <section class="panel">
+      <span class="eyebrow">Marketing URL</span>
+      <h1>An independent project built with care and long-term intent.</h1>
+      <p class="lead">GoalForge Heroes is being developed by <strong>George Whitaker</strong> as an early-stage independent app project. The developer is working seriously on the application and aims to create something useful, improving it over time and focusing on practical value for users.</p>
+    </section>
 
-<div class="card">
-<p>I am a beginner independent developer working hard to create valuable digital products.</p>
+    <section class="grid">
+      <article class="card span-8">
+        <h2>Current state of the product</h2>
+        <p class="muted">The application currently does not include paid features, premium access, or subscriptions. The current focus is on building the product foundation, improving quality, and offering value through the core experience.</p>
+        <div>
+          <span class="tag">No subscriptions yet</span>
+          <span class="tag">No paid features yet</span>
+          <span class="tag">Independent development</span>
+        </div>
+      </article>
+      <article class="card span-4">
+        <h2>Future direction</h2>
+        <p class="muted">Monetization may be added in the future in a careful and transparent way so the project can generate income and continue growing sustainably.</p>
+      </article>
+      <article class="card span-12">
+        <h2>Value statement</h2>
+        <p class="muted">The intention behind this application is not only to publish a product, but also to provide meaningful value through thoughtful development, ongoing improvements, and a clear relationship with users and reviewers.</p>
+      </article>
+    </section>
 
-<p><span class="highlight">GoalForge Heroes</span> is built with passion and dedication.</p>
-
-<p>Currently, the app does not include paid features or subscriptions.</p>
-
-<p>In the future, monetization options may be introduced to support further development and provide continuous updates.</p>
-
-<p>My goal is to bring real value, motivation and productivity tools to users.</p>
-
-<p>Transparency and user trust are my priority.</p>
-</div>
-
-<p style="margin-top:20px;">
-<a href="index.html">Back to Home</a>
-</p>
-
+    <div class="footer">GoalForge Heroes · Marketing page · George Whitaker · davewklr2@gmail.com</div>
+  </div>
 </body>
 </html>
