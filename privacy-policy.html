@@ -1,69 +1,375 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a1028" />
   <title>Privacy Policy — GoalForge Heroes</title>
-  <meta name="description" content="Privacy Policy for GoalForge Heroes by George Whitaker." />
   <style>
-    :root{--bg:#070b1a;--bg2:#0f1630;--card:rgba(255,255,255,.08);--line:rgba(255,255,255,.12);--text:#f4f7ff;--muted:#b8c2e3;--aqua:#77f2df;--violet:#8e8bff;--ok:#98ffb3;--radius:26px}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 20%, rgba(119,242,223,.16), transparent 22%),radial-gradient(circle at 85% 10%, rgba(142,139,255,.16), transparent 24%),linear-gradient(180deg,var(--bg),var(--bg2));min-height:100vh}
-    body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(circle at center, black 45%, transparent 88%);pointer-events:none}
-    .shell{width:min(1100px,calc(100% - 28px));margin:18px auto 42px}.topbar,.panel,.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(18px);box-shadow:0 10px 30px rgba(105,121,255,.18)}
-    .topbar{padding:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}.brand{font-weight:800;font-size:clamp(1.3rem,2vw,1.8rem);flex:1 1 210px}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--text);padding:12px 18px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}.nav a:hover,.nav a.active{background:linear-gradient(135deg, rgba(119,242,223,.18), rgba(142,139,255,.18));border-color:rgba(119,242,223,.35)}
-    .panel{margin-top:18px;padding:24px;position:relative;overflow:hidden}.eyebrow{display:inline-flex;padding:10px 18px;border-radius:999px;border:1px solid rgba(119,242,223,.28);background:rgba(119,242,223,.08);color:var(--aqua)}h1{font-size:clamp(2rem,5.6vw,4.2rem);line-height:.98;letter-spacing:-.03em;margin:18px 0 14px;max-width:760px}.lead{max-width:760px;color:var(--muted);font-size:clamp(1rem,1.4vw,1.18rem);line-height:1.75}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}.tile{padding:22px}.span-6{grid-column:span 6}.span-12{grid-column:1/-1}.tile h2{margin:0 0 10px;font-size:1.25rem}.tile p,.tile li{color:var(--muted);line-height:1.7}.ok{color:var(--ok);font-weight:700}.footer{padding:18px 4px 4px;color:var(--muted);text-align:center}
-    @media (max-width:860px){.span-6,.span-12{grid-column:1/-1}}
-    @media (max-width:640px){.shell{width:min(100% - 14px, 900px);margin-top:10px}.topbar{display:grid;grid-template-columns:1fr;gap:10px;padding:14px}.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.nav a{text-align:center;padding:13px 10px;border-radius:16px}.panel,.tile{border-radius:24px;padding:18px}}
+    :root {
+      --bg1:#060b1c;
+      --bg2:#0b1433;
+      --card:rgba(24,31,66,.78);
+      --card2:rgba(33,41,84,.70);
+      --line:rgba(255,255,255,.12);
+      --text:#eef2ff;
+      --muted:#c7cce6;
+      --accent:#8cf3dd;
+      --accent2:#8ea2ff;
+      --glow:0 18px 60px rgba(53,95,255,.22);
+    }
+    * { box-sizing:border-box; }
+    html, body { margin:0; padding:0; }
+    body {
+      min-height:100vh;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(106,255,224,.16), transparent 20%),
+        radial-gradient(circle at 85% 20%, rgba(122,138,255,.20), transparent 24%),
+        radial-gradient(circle at 60% 80%, rgba(39,77,255,.18), transparent 24%),
+        linear-gradient(180deg, var(--bg1), var(--bg2) 65%, #07102a);
+      overflow-x:hidden;
+    }
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:36px 36px;
+      mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
+      opacity:.35;
+      pointer-events:none;
+    }
+    .shell {
+      width:min(1120px, calc(100% - 28px));
+      margin:18px auto 28px;
+      position:relative;
+    }
+    .topbar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:30px;
+      background:linear-gradient(180deg, rgba(15,22,50,.88), rgba(12,18,45,.72));
+      backdrop-filter: blur(14px);
+      box-shadow: var(--glow);
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+    .logo {
+      width:56px;
+      height:56px;
+      border-radius:18px;
+      background:linear-gradient(135deg, #9ff6da, #7c85ff 52%, #ffd67a);
+      position:relative;
+      box-shadow:0 0 0 1px rgba(255,255,255,.14) inset, 0 16px 34px rgba(108,120,255,.25);
+      flex:0 0 auto;
+    }
+    .logo::after {
+      content:"";
+      position:absolute;
+      inset:10px;
+      border-radius:14px;
+      background:#0a1028;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+    }
+    .brand-copy h1 {
+      margin:0 0 4px;
+      font-size:clamp(1.1rem, 2.4vw, 1.65rem);
+      letter-spacing:.02em;
+    }
+    .brand-copy p {
+      margin:0;
+      color:var(--muted);
+      font-size:.95rem;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:42vw;
+    }
+    .nav {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
+    .nav-link {
+      text-decoration:none;
+      color:var(--text);
+      padding:12px 16px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.04);
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      transition:.22s ease;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+      white-space:nowrap;
+    }
+    .nav-link:hover, .nav-link.active {
+      transform:translateY(-1px);
+      border-color:rgba(140,243,221,.34);
+      background:linear-gradient(135deg, rgba(140,243,221,.14), rgba(142,162,255,.16));
+    }
+    .hero {
+      margin-top:18px;
+      padding:28px;
+      border-radius:34px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(33,41,84,.64), rgba(19,27,58,.76));
+      box-shadow: var(--glow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before {
+      content:"";
+      position:absolute;
+      width:280px;
+      height:280px;
+      right:-70px;
+      top:-70px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(141,160,255,.28), transparent 70%);
+      filter:blur(10px);
+    }
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(140,243,221,.24);
+      color:var(--accent);
+      background:rgba(140,243,221,.08);
+      font-size:.95rem;
+    }
+    .hero h2 {
+      margin:18px 0 14px;
+      font-size:clamp(2rem, 5vw, 4.2rem);
+      line-height:.96;
+      letter-spacing:-.04em;
+      max-width:840px;
+    }
+    .hero p {
+      margin:0;
+      max-width:760px;
+      color:var(--muted);
+      font-size:clamp(1rem, 1.6vw, 1.18rem);
+      line-height:1.7;
+    }
+    .cta-row {
+      margin-top:22px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .btn {
+      text-decoration:none;
+      color:var(--text);
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.1);
+      padding:14px 18px;
+      min-height:50px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(255,255,255,.04);
+    }
+    .btn.primary {
+      background:linear-gradient(135deg, rgba(140,243,221,.16), rgba(142,162,255,.22));
+      border-color:rgba(140,243,221,.3);
+    }
+    .grid {
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(12, 1fr);
+      gap:18px;
+    }
+    .card {
+      grid-column:span 6;
+      padding:24px;
+      border-radius:30px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, var(--card), var(--card2));
+      box-shadow: var(--glow);
+      min-width:0;
+    }
+    .card.full {
+      grid-column:1 / -1;
+    }
+    .card h3 {
+      margin:0 0 12px;
+      font-size:clamp(1.35rem, 2.2vw, 2.15rem);
+      line-height:1.1;
+      letter-spacing:-.03em;
+    }
+    .card p, .card li {
+      margin:0;
+      color:var(--muted);
+      font-size:1.04rem;
+      line-height:1.75;
+      overflow-wrap:anywhere;
+    }
+    .mail-chip {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 18px;
+      border-radius:18px;
+      border:1px solid rgba(140,243,221,.28);
+      background:linear-gradient(135deg, rgba(140,243,221,.10), rgba(142,162,255,.14));
+      color:var(--text);
+      font-size:1.05rem;
+      margin:8px 0 18px;
+      max-width:100%;
+      overflow-wrap:anywhere;
+      text-align:center;
+    }
+    .footer {
+      text-align:center;
+      color:var(--muted);
+      padding:22px 10px 10px;
+      font-size:1rem;
+    }
+    @media (max-width: 860px) {
+      .topbar {
+        display:block;
+        padding:16px;
+      }
+      .brand {
+        margin-bottom:14px;
+      }
+      .brand-copy p {
+        max-width:none;
+      }
+      .nav {
+        display:grid;
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:10px;
+      }
+      .nav-link {
+        width:100%;
+        padding:12px 10px;
+        border-radius:16px;
+        text-align:center;
+      }
+      .grid {
+        grid-template-columns:1fr;
+      }
+      .card, .card.full {
+        grid-column:1 / -1;
+        width:100%;
+      }
+      .hero {
+        padding:22px 18px;
+        border-radius:28px;
+      }
+    }
+    @media (max-width: 520px) {
+      .shell {
+        width:min(100% - 16px, 100%);
+        margin:10px auto 22px;
+      }
+      .topbar {
+        border-radius:24px;
+      }
+      .logo {
+        width:48px;
+        height:48px;
+        border-radius:15px;
+      }
+      .nav {
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+      .hero h2 {
+        font-size:2.45rem;
+      }
+      .hero p, .card p, .card li {
+        font-size:1rem;
+        line-height:1.72;
+      }
+      .card {
+        padding:20px 18px;
+        border-radius:24px;
+      }
+      .mail-chip {
+        width:100%;
+      }
+      .cta-row {
+        display:grid;
+        grid-template-columns:1fr;
+      }
+      .btn {
+        width:100%;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="shell">
+  <main class="shell">
     <header class="topbar">
-      <div class="brand">GoalForge Heroes</div>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a class="active" href="privacy-policy.html">Privacy Policy</a>
-        <a href="support.html">Support</a>
-        <a href="marketing.html">Marketing</a>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-copy">
+          <h1>GoalForge Heroes</h1>
+          <p>Developer overview for App Store Connect</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Site navigation">
+        <a class="nav-link " href="index.html">Home</a><a class="nav-link active" href="privacy-policy.html">Privacy Policy</a><a class="nav-link " href="support.html">Support</a><a class="nav-link " href="marketing.html">Marketing</a>
       </nav>
     </header>
 
-    <section class="panel">
-      <span class="eyebrow">Privacy Policy</span>
-      <h1>We do not collect, store, or share personal data.</h1>
-      <p class="lead">This Privacy Policy applies to the application <strong>GoalForge Heroes</strong> provided by <strong>George Whitaker</strong>. The app is built with a simple privacy approach. We do not collect personal information, do not store user data, and do not share user data with third parties.</p>
-    </section>
-
-    <section class="grid">
-      <article class="tile span-6">
-        <h2 class="ok">No data collection</h2>
-        <p>We do not collect personal information from users.</p>
-      </article>
-      <article class="tile span-6">
-        <h2 class="ok">No data storage</h2>
-        <p>We do not retain personal data on servers, databases, or internal storage for analytics or profiling.</p>
-      </article>
-      <article class="tile span-6">
-        <h2 class="ok">No data sharing</h2>
-        <p>We do not sell, transfer, disclose, or share personal data with external services or third parties.</p>
-      </article>
-      <article class="tile span-6">
-        <h2>Questions</h2>
-        <p>If users or reviewers need clarification about this policy, they may use the support page of this website.</p>
-      </article>
-      <article class="tile span-12">
-        <h2>Policy summary</h2>
-        <ul>
-          <li>The application does not collect personal data.</li>
-          <li>The application does not store personal data.</li>
-          <li>The application does not share personal data.</li>
-          <li>This statement is provided to keep the privacy position clear and easy to review in App Store Connect.</li>
-        </ul>
-      </article>
-    </section>
-
-    <div class="footer">GoalForge Heroes · Privacy Policy · George Whitaker · davewklr2@gmail.com</div>
+    
+<section class="hero">
+  <div class="eyebrow">Privacy Policy</div>
+  <h2>We do not collect, store, or share personal data.</h2>
+  <p>
+    This Privacy Policy applies to the application GoalForge Heroes provided by George Whitaker.
+    The application is designed with a simple privacy approach.
+  </p>
+  <div class="cta-row">
+    <a class="btn" href="support.html">Need support?</a>
+    <a class="btn" href="index.html">Back to home</a>
   </div>
+</section>
+
+<section class="grid">
+  <article class="card">
+    <h3>No data collection</h3>
+    <p>We do not collect personal information from users.</p>
+  </article>
+  <article class="card">
+    <h3>No storage</h3>
+    <p>We do not store user personal data on servers, databases, or external systems.</p>
+  </article>
+  <article class="card">
+    <h3>No sharing</h3>
+    <p>We do not sell, transfer, or share personal data with third parties.</p>
+  </article>
+  <article class="card">
+    <h3>Simple policy intent</h3>
+    <p>
+      The purpose of this policy is to provide a clear and honest statement about the current
+      privacy approach of the application.
+    </p>
+  </article>
+</section>
+
+
+    <footer class="footer">GoalForge Heroes · George Whitaker · davewklr2@gmail.com</footer>
+  </main>
 </body>
 </html>
